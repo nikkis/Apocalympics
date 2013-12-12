@@ -50,6 +50,7 @@ public class MainActivity extends Activity {
 
 	protected static final String TAG = MainActivity.class.getSimpleName();
 
+	// jee
 
 
 	private static final String CAPABILITY_PATH = "com/sdp/capabilities/";
