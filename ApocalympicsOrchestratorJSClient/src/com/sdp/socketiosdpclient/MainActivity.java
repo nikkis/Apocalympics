@@ -51,6 +51,7 @@ public class MainActivity extends Activity {
 	protected static final String TAG = MainActivity.class.getSimpleName();
 
 
+	
 
 	private static final String CAPABILITY_PATH = "com/sdp/capabilities/";
 
@@ -185,6 +186,7 @@ public class MainActivity extends Activity {
 				try {
 					applySettings();
 					
+					p("ipAdress: "+ipAdress);
 					u = new URI(ipAdress);
 					client = createSocketIOClient();
 				} catch (URISyntaxException e1) {

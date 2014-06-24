@@ -20,6 +20,7 @@ import org.json.JSONObject;
 
 import android.content.Intent;
 import android.net.http.AndroidHttpClient;
+import android.os.Debug;
 import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Log;
@@ -354,8 +355,11 @@ public class SocketIOClient {
         new Thread() {
             public void run() {
                 HttpPost post = new HttpPost(mURL);
+                Log.d(TAG, "mURL: "+mURL);
                 try {
                     String line = downloadUriAsString(post);
+                    Log.d(TAG, "line2: "+line);
+                    
                     String[] parts = line.split(":");
                     mSession = parts[0];
                     String heartbeat = parts[1];
